@@ -1,0 +1,28 @@
+﻿@page
+@model practice01.Pages.productModel
+@{
+}
+
+
+<div class="text-center">
+    <h1>We have Variety of Option to fill your Taste</h1>
+    
+   
+
+    <div class="row">
+
+        @foreach (var item in Model.BreadModels)
+        {
+            var imagepath = "./Images/" + (item.ImageName + ".jpg");
+
+            <div class="col-4">
+                <img src="@imagepath" class="w-100" />
+                <h5>@item.BreadName</h5>
+                <h6>@item.BreadSize</h6>
+                <h6>@item.BreadPrice $</h6>
+            </div>
+        }
+
+
+    </div>
+</div>

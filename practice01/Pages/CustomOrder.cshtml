@@ -1,0 +1,31 @@
+﻿@page
+@model practice01.Pages.CustomOrderModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="text-capitalize">Create Your Personal Order!</h1>
+
+    <form method="post">
+        <label>Customer Name :</label>
+        <input type="text" class="form-control-sm mb-1" placeholder="type your Name here . . ." asp-for="Bread.BreadName"/>
+        <br />
+        <label>Bread Type :</label>
+        <select class="form-control-sm mb-1" asp-for="Bread.ImageName">
+            <option value="crustyfrenchbread">crusty french bread</option>
+            <option value="GlutenBread">Gluten Bread</option>
+            <option value="milkbread">milk bread</option>
+            <option value="mixedSeeded Bread">mixed Seeded Bread</option>
+            <option value="SandwichWhite">Sandwich White</option>
+        </select>
+        <br />
+        <label>Bread Size :</label>
+        <select class="form-control-sm mb-1" asp-for="Bread.BreadSize">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+        <br />
+        <button class="btn btn-danger">Confirm Order</button>
+    </form>
+</div>
